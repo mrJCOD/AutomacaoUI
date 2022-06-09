@@ -9,7 +9,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class CadastrarUsuario3 {
+public class CadastrarUsuario3 { 
+	
+	//tt2
 
 	private static WebDriver driver;
 

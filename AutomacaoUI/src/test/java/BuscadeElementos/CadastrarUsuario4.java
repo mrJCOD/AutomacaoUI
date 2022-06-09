@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import Metodos.Metodos;
 
 public class CadastrarUsuario4 extends Metodos {
+	
+	//tt1
 
 	@Before
 	public void setUp() throws Exception {
@@ -16,7 +18,7 @@ public class CadastrarUsuario4 extends Metodos {
 		iniciarTeste("chrome", "https://automacaocombatista.herokuapp.com/users/new");
 		
 		
-	}
+	} 
 
 	@After
 	public void tearDown() throws Exception {
