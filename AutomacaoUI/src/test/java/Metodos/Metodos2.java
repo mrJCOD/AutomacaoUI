@@ -1,12 +1,23 @@
 package Metodos;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Metodos2 {
 	
-	WebDriver mauro;
+	public static WebDriver mauro;
+	
+	public static WebDriver navegador() {
+		return mauro;
+
+	}
 	
 	public void iniciarTeste(String parametro) { 
 		
@@ -50,6 +61,16 @@ public class Metodos2 {
 		
 		mauro.switchTo().alert().sendKeys(texto);
 		
+	}
+	
+	public void printScr(String nome) throws IOException {
+
+		TakesScreenshot scrShot = ((TakesScreenshot)navegador());
+		File nomeArq = scrShot.getScreenshotAs(OutputType.FILE);
+		File destArq = new File("./src/evidencias/"+nome+".png");
+		FileUtils.copyFile(nomeArq, destArq);
+
+
 	}
 	
 	

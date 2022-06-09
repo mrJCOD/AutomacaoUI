@@ -1,9 +1,14 @@
 package Metodos;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,18 +17,24 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import Elementos.Elementos;
+import Elementos.Elementos3;
 
-public class Metodos {
+public class Metodos extends Elementos3{
 
 	Elementos el = new Elementos();
-	WebDriver driver;
+	public static WebDriver driver;
+
+	public static WebDriver navegador() {
+		return driver;
+
+	}
 
 	public void iniciarTeste(String browser, String url) {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 
 			System.out.println("Iniciando Google Chrome...");
-			System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C://driver-navegadores/chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.get(url);
@@ -145,6 +156,15 @@ public class Metodos {
 		
 		JavascriptExecutor scroll = (JavascriptExecutor)driver;
 		scroll.executeScript("window.scrollBy(0,300)");
+	}
+	
+	public void printScr(String nome) throws IOException {
+
+		TakesScreenshot scrShot = ((TakesScreenshot)navegador());
+		File nomeArq = scrShot.getScreenshotAs(OutputType.FILE);
+		File destArq = new File("./src/evidencias/"+nome+".png");
+		FileUtils.copyFile(nomeArq, destArq);
+
 	}
 	
 	

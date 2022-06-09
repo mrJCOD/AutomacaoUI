@@ -13,7 +13,6 @@ public class Elementos2 {
 	private By genero = By.id("user_gender");
 	private By idade = By.id("user_age");
 	private By botaoCriar = By.xpath("//*[@id='new_user']/div[5]/div/div");
-	
 	//editar usuario
 	private By botaoEditar = By.xpath("//a[@href='/users/3098/edit']");
 	private By edicaoRua = By.id("user_address");
@@ -22,13 +21,27 @@ public class Elementos2 {
 	
 	//checkbox
 	private By purple = By.xpath("//label[@for='purple']");
+	private By red = By.xpath("//label[@for='red']");
+	private By blue = By.xpath("//label[@for='blue']");
+	private By yellow = By.xpath("//label[@for='yellow']");
+	private By green = By.xpath("//label[@for='green']");
+	private By grey = By.xpath("//label[@for='grey']");
+	private By black = By.xpath("//label[@for='black']");
+	private By white = By.xpath("//label[@for='white']");
+	
 	
 	
 	//Alertas
 	
+
 	private By alerta1 = By.xpath("(//button[@class='btn  waves-light green'])[1]");
 	private By alerta2 = By.xpath("(//button[@class='btn  waves-light green'])[2]");
 	private By alerta3 = By.xpath("(//button[@class='btn  waves-light green'])[3]");
+	
+	
+	private By campoescrever = By.xpath("//input[@ng-model='newTodo']");
+	private By validacaoCampo = By.xpath("//label[@class='ng-binding']");
+	
 	
 	
 	
@@ -83,6 +96,33 @@ public class Elementos2 {
 	}
 	public By getAlerta3() {
 		return alerta3;
+	}
+	public By getCampoescrever() {
+		return campoescrever;
+	}
+	public By getValidacaoCampo() {
+		return validacaoCampo;
+	}
+	public By getRed() {
+		return red;
+	}
+	public By getBlue() {
+		return blue;
+	}
+	public By getYellow() {
+		return yellow;
+	}
+	public By getGreen() {
+		return green;
+	}
+	public By getGrey() {
+		return grey;
+	}
+	public By getBlack() {
+		return black;
+	}
+	public By getWhite() {
+		return white;
 	}
 	
 	
