@@ -2,7 +2,7 @@ package Arraylist;
 
 import javax.swing.JOptionPane;
 
-public class Aula03 {
+public class CocienteEPotencia {
 
 	public static void main(String entrada[]) {
 		

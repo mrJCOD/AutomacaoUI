@@ -128,7 +128,7 @@ public class CadastroUsuario {
 
 		case '3': {
 
-			System.out.println("Business Selecionado");
+			System.out.println("Basic Selecionado");
 		}
 
 		}

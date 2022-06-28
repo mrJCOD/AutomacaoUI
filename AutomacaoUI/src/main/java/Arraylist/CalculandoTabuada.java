@@ -8,7 +8,7 @@ package Arraylist;
 
 import javax.swing.JOptionPane;
 
-public class Aula04 {
+public class CalculandoTabuada {
 
 	public static void main(String entrada[]) {
 		// variaveis
