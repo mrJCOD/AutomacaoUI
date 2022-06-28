@@ -18,7 +18,7 @@ public class Aula05 {
 		
 		case '1': {
 			
-			if(num1%2==0 && num2%2==0) {
+			if(num1%2!=0 && num2%2!=0) {
 				result = num1 + num2;
 				msg = msg + "Soma de " + num1 + " por " + num2 + " = " + result + "\n\n";
 				System.out.println(msg);

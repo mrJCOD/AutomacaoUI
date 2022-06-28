@@ -21,17 +21,7 @@ public class Aula04 {
 		tabuada = Integer.parseInt(JOptionPane.showInputDialog("Digite um numero inteiro."));
 		op = (JOptionPane.showInputDialog(msgEntry)).charAt(0);
 
-		// Processamento
 
-		// switch(op) {
-
-		 //Saida do resultado
-		// if (op >='1' && op <='3') {
-
-		// JOptionPane.showMessageDialog(null, msg);
-		// }
-		// System.exit(0);
-		//}
 
 		switch (op) {
 		case '1': {
@@ -75,5 +65,6 @@ public class Aula04 {
 		}
 
 	}
+	
 
 }

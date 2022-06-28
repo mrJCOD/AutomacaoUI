@@ -13,7 +13,7 @@ public class AutoComplete {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C://driver-navegadores/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://google.com.br");
 		driver.manage().window().maximize();

@@ -10,7 +10,7 @@ public class MouseHover3 {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C://driver-navegadores/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://automacaocombatista.herokuapp.com/iteracoes/mousehover");

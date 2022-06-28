@@ -1,8 +1,12 @@
 package Metodos;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -38,6 +42,7 @@ public class Metodos extends Elementos3{
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.get(url);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		} else if (browser.equalsIgnoreCase("Firefox")) {
 
@@ -165,6 +170,19 @@ public class Metodos extends Elementos3{
 		File destArq = new File("./src/evidencias/"+nome+".png");
 		FileUtils.copyFile(nomeArq, destArq);
 
+	}
+	
+public void validarElementoVisivel(By elemento) {
+		
+		boolean validacao = driver.findElement(elemento).isDisplayed();
+		assertTrue(validacao);
+	}
+	
+	public void validarTexto(By elemento, String texto) {
+		
+		String textoGet = pegarTexto(elemento);
+		String textoEsperado = texto;
+		assertEquals(textoEsperado, textoGet);
 	}
 	
 	

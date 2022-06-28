@@ -1,5 +1,7 @@
 package BuscadeElementos;
 
+import java.io.IOException;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,7 +9,7 @@ import org.openqa.selenium.By;
 
 import Metodos.Metodos;
 
-public class dropDownSelectMetodo {
+public class dropDownSelectMetodo extends Metodos{
 	
 	Metodos met = new Metodos();
 
@@ -19,12 +21,15 @@ public class dropDownSelectMetodo {
 
 	@After
 	public void tearDown() throws Exception {
+		
+		fechar();
 	}
 
 	@Test
-	public void test() {
+	public void test() throws IOException {
 		
 		met.select(By.name("birthday_day"), "4", "4", 3);
+		
 
 	}
 

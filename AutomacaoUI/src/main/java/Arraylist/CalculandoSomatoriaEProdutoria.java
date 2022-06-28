@@ -37,7 +37,7 @@ public class CalculandoSomatoriaEProdutoria {
 		r = produto(vetor);
 		JOptionPane.showMessageDialog(null, "A produtoria eh " + r);
 		System.exit(0);
-		
+
 
 
 	}

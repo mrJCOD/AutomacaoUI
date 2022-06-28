@@ -2,6 +2,8 @@ package BuscadeElementos;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.IOException;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,13 +34,14 @@ public class CadastrarUsuario2 {
 	}
 
 	@Test
-	public void test() throws InterruptedException {
+	public void test() throws InterruptedException, IOException {
 		
 		met.digitar("Estudar assert", el.getCampoescrever());
 		met.enter(el.getCampoescrever());
 		String texto = met.pegarTexto(el.getValidacaoCampo());
 		String textoEsperado = "Estudar assert";
 		assertEquals(textoEsperado, texto);
+		met.printScr("Nome do print");
 
 		
 
