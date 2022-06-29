@@ -25,17 +25,19 @@ public class tabelas extends Metodos {
 
 	@Test
 	public void validandoLinhas() {
-
+		
 		List<WebElement> linhas = driver.findElements(By.xpath("//table[@class='centered highlight']/tbody/tr"));
+
+		//List<WebElement> linhas = driver.findElements(By.xpath("//table[@class='centered highlight']/tbody/tr"));
 		int tamanhoLinhas = linhas.size();
 		System.out.println(tamanhoLinhas);
 		
-
-		for (int i = 1; i <= tamanhoLinhas; i++) {
+								//8        adicionar 1 ao i a primeira vez que rodar vai estar 1, quando ele rodar denovo ele vai adicionar 1 ao i entao vai ser 2
+		for (int i = 1;	i <= tamanhoLinhas;	i++) { // para cada i eu vou rodar esse loop 
 			
 
 			System.out.println(driver.findElement(
-						By.xpath("//table[@class='centered highlight']/tbody/tr["+i+"]"))
+						By.xpath("//table[@class='centered highlight']/tbody/tr["+i+"]")) 
 						.getText());
 
 
